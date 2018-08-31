@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ToDo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="realm_demo1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y9j-rl-IIl">
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="68" id="PSy-rF-iw0" customClass="ToDoCell" customModule="realm_demo1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PSy-rF-iw0" id="sJv-hI-O5b">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="q7X-cc-qrm">
+                                                    <rect key="frame" x="15" y="23" width="345" height="23"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB8-sr-rNT">
+                                                            <rect key="frame" x="0.0" y="1.5" width="308" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLa-NS-Ofd">
+                                                            <rect key="frame" x="313" y="0.0" width="32" height="23"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="32" id="ep9-Td-QLX"/>
+                                                            </constraints>
+                                                            <state key="normal" image="uncheck"/>
+                                                            <connections>
+                                                                <action selector="toggleComplate" destination="PSy-rF-iw0" eventType="touchUpInside" id="dJp-Fb-Vtk"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="q7X-cc-qrm" firstAttribute="leading" secondItem="sJv-hI-O5b" secondAttribute="leading" constant="15" id="Gm1-hr-G5p"/>
+                                                <constraint firstItem="q7X-cc-qrm" firstAttribute="centerY" secondItem="sJv-hI-O5b" secondAttribute="centerY" id="WYF-bY-Ymo"/>
+                                                <constraint firstAttribute="trailing" secondItem="q7X-cc-qrm" secondAttribute="trailing" constant="15" id="vdR-SF-3Bo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="button" destination="gLa-NS-Ofd" id="rhD-dN-KM4"/>
+                                            <outlet property="label" destination="FB8-sr-rNT" id="v6p-yO-t7N"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fS1-bC-gAS">
+                                <rect key="frame" x="20" y="50" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJh-iA-MSF">
+                                <rect key="frame" x="325" y="41" width="30" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="➕"/>
+                                <connections>
+                                    <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bbi-e0-FWb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fS1-bC-gAS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2EA-2I-lDq"/>
+                            <constraint firstItem="fS1-bC-gAS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="3QJ-qa-7if"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fJh-iA-MSF" secondAttribute="trailing" constant="20" id="ABT-ZF-5E5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y9j-rl-IIl" secondAttribute="bottom" id="Kf1-mA-cD4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y9j-rl-IIl" secondAttribute="trailing" id="L77-Wc-IsP"/>
+                            <constraint firstItem="fJh-iA-MSF" firstAttribute="centerY" secondItem="fS1-bC-gAS" secondAttribute="centerY" id="VWV-mB-XoR"/>
+                            <constraint firstItem="y9j-rl-IIl" firstAttribute="top" secondItem="fS1-bC-gAS" secondAttribute="bottom" constant="25" id="dLW-Tw-tVu"/>
+                            <constraint firstItem="y9j-rl-IIl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oBv-Od-azs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ToDo" id="XLG-jP-tFn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Jx9-cV-5lM">
+                            <connections>
+                                <action selector="add:" destination="BYZ-38-t0r" id="apf-GR-7Ak"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="y9j-rl-IIl" id="5MS-H1-anD"/>
+                        <outlet property="titleLabel" destination="fS1-bC-gAS" id="fdP-AH-UNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="383" y="-359"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="uncheck" width="23" height="23"/>
+    </resources>
+</document>
