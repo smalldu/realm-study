@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       realm.add( ToDoItem("买早餐") )
       realm.add( ToDoItem("读书") )
     }
-    
   }
   
   

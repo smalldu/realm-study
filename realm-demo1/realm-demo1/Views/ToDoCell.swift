@@ -36,6 +36,5 @@ class ToDoCell: UITableViewCell {
                                               attributes: item.isCompleted ? [.strikethroughStyle: true] : [:])
     button.setImage(item.isCompleted ? #imageLiteral(resourceName: "check"):#imageLiteral(resourceName: "uncheck") , for: .normal)
   }
-  
 }
 

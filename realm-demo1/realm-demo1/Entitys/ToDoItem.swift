@@ -12,12 +12,13 @@ import RealmSwift
 @objcMembers class ToDoItem: Object {
   
   enum Property: String {
-    case id, text, isCompleted
+    case id, text, isCompleted , createAt
   }
   
   dynamic var id = UUID().uuidString
   dynamic var text = ""
   dynamic var isCompleted = false
+  dynamic var createAt = Date()
   
   override static func primaryKey() -> String? {
     return ToDoItem.Property.id.rawValue
@@ -30,6 +31,7 @@ import RealmSwift
 }
 
 // MARK: - 增删改查
+
 extension ToDoItem {
   
   static func all(in realm: Realm = try! Realm()) -> Results<ToDoItem>{
